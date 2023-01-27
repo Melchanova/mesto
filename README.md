@@ -15,6 +15,6 @@
 
 **Картинки**
 
-Сылка на проект [https://melchanova.github.io/mesto/]
+Ссылка на проект [https://melchanova.github.io/mesto/]
 
 
