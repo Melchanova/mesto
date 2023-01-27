@@ -1,0 +1,30 @@
+                        .profile__edit-button {
+                            border: 1px solid #fff;
+                            background-image: url(../../../images/pensil.svg);
+                            width: 24px;
+                            height: 24px;
+                            background-size: 10px;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            box-sizing: border-box;
+                            background-color: #000;
+                            padding: 0;
+                            display: flex;
+                            margin-left: 18px;
+                            margin-top: 20px;
+                            cursor: pointer;
+                        }
+                        
+                        .profile__edit-button:hover {
+                            opacity: .6;
+                        }
+                        
+                        @media screen and (max-width: 767px) {
+                            .profile__edit-button {
+                                margin-left: 20px;
+                                margin-top: 8px;
+                                width: 18px;
+                                height: 18px;
+                                background-size: 7.5px;
+                            }
+                        }

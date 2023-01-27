@@ -1,0 +1,7 @@
+    .article__item {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 282px;
+        object-fit: cover;
+        height: 282px;
+    }

@@ -1,0 +1,18 @@
+            .article__icon {
+                padding: 0;
+                margin: 0;
+                background-image: url(../../../images/Vector\ \(Stroke\).svg);
+                background-repeat: no-repeat;
+                background-color: #fff;
+                position: relativ;
+                align-items: center;
+                width: 22px;
+                color: #000;
+                border: none;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+            
+            .article__icon:hover {
+                opacity: 0.5;
+            }
