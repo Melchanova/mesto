@@ -1,6 +1,6 @@
             .article__icon {
                 padding: 0;
-                margin: 0;
+                margin-top: 5px;
                 background-image: url(../../../images/Vector\ \(Stroke\).svg);
                 background-repeat: no-repeat;
                 background-color: #fff;
@@ -9,7 +9,7 @@
                 width: 22px;
                 color: #000;
                 border: none;
-                margin-right: 5px;
+                margin-left: auto;
                 cursor: pointer;
             }
             

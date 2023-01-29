@@ -12,10 +12,9 @@
 <body class="root">
     <div class="page">
         <header class="header">
-            <img class="header__logo" src="./images/logo.png" alt="Место России">
+            <img class="header__logo" src="./images/logo.svg" alt="Место России">
         </header>
         <main class="main">
-            <div class="main__line"></div>
             <section class="profile">
                 <img class="profile__avatar" src="./images/kusto.png" alt="Жак Ив Кусто">
                 <div class="profile__info">
@@ -41,7 +40,7 @@
                 </article>
 
                 <article class="article">
-                    <img class="article__item" src="./images/gora ilbrus.png" alt="Гора Эльбрус">
+                    <img class="article__item" src="./images/gora_ilbrus.png" alt="Эльбрус">
                     <div class="article__content">
                         <h2 class="article__title">Гора Эльбрус</h2>
                         <button class="article__icon article__icon_active" type="button" aria-label="Лайк"></button>
@@ -65,9 +64,9 @@
                 </article>
 
                 <article class="article">
-                    <img class="article__item" src="./images/Doroga v goru.jpg" alt="Путь в горы">
+                    <img class="article__item" src="./images/Doroga_v_goru.jpg" alt="По горам">
                     <div class="article__content">
-                        <h2 class="article__title">Путь в горы</h2>
+                        <h2 class="article__title">По горам</h2>
                         <button class="article__icon article__icon_active" type="button" aria-label="Лайк"></button>
                     </div>
                 </article>
@@ -86,22 +85,18 @@
     <footer class="footer">
         <p class="footer__copyright">&copy;2023. Mesto Russia</p>
     </footer>
-    <section class="popup popup_profile">
+    <section class="popup">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <button class="popup__close popup__close_type_profile" type="button"></button>
-            <form action="#" class="popup__form popup__form_type_profile" name="popup" novalidate>
-                <label class="popup__label">
-                <input class="popup__input popup__input_value_name" type="text" placeholder="Жак-Ив Кусто" required minlength="2" maxlength="40"/>
-                </label>
-                <label class="popup__label">
-                <input class="popup__input popup__input_value_about" type="text" placeholder="Исследователь океана" required minlength="2" maxlength="200"/>
-                </label>
+            <button class="popup__close" type="button"></button>
+            <form class="popup__form" name="popup" novalidate>
+                <input class="popup__input popup__input_value_name" name="profile__title" placeholder="Ваше имя" value=" Жак-Ив Кусто">
+                <input class="popup__input popup__input_value_about" name="profile__subtitle " placeholder="О себе" value="Исследователь океана">
                 <button class="popup__submit" type="submit">Сохранить</button>
             </form>
         </div>
     </section>
-    <script src="scripts/index.js"></script>
+    <script src="scripts/index.js "></script>
 </body>
 
 </html>

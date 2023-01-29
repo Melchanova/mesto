@@ -9,4 +9,5 @@
         overflow: hidden;
         color: black;
         align-items: center;
+        max-width: 200px;
     }

@@ -1,7 +1,6 @@
-.article {
-    background-color: #fff;
-    border-radius: 10px;
-    max-height: 361px;
-    margin: 0;
-    max-width: 282px;
-}
+            .article {
+                background-color: #fff;
+                border-radius: 10px;
+                margin: 0;
+                max-width: 100%;
+            }
