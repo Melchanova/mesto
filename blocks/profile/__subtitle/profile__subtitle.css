@@ -1,22 +1,22 @@
+.profile__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding-top: 6px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 294px;
+}
+
+@media screen and (max-width: 950px) {
     .profile__subtitle {
-        font-size: 18px;
-        line-height: 22px;
-        font-weight: 400;
-        font-style: normal;
-        margin: 0;
-        padding-top: 5px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        max-width: 294px;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        padding: 0;
+        max-width: 189px;
     }
-    
-    @media screen and (max-width: 950px) {
-        .profile__subtitle {
-            font-size: 14px;
-            line-height: 17px;
-            text-align: center;
-            padding: 0;
-            max-width: 189px;
-        }
-    }
+}
