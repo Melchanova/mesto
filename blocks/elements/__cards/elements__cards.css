@@ -1,4 +1,4 @@
-.element__cards {
+.elements__cards {
     margin: 0 auto;
     max-width: 880px;
     padding: 51px 0 0 0;
@@ -9,20 +9,20 @@
 }
 
 @media screen and (max-width: 1023px) {
-    .element__cards {
+    .elements__cards {
         padding-left: 72px;
         padding-right: 72px;
     }
 }
 
 @media screen and (max-width: 640px) {
-    .element__cards {
+    .elements__cards {
         grid-template-columns: 1fr;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .element__cards {
+    .elements__cards {
         padding-top: 36px;
         padding-left: 19px;
         padding-right: 19px;

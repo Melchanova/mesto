@@ -2,21 +2,21 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mesto</title>
-    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="stylesheet" href="./pages/index.css" />
 </head>
 
 <body class="root">
     <div class="page">
         <header class="header">
-            <img class="header__logo" src="./images/logo.svg" alt="Место России">
+            <img class="header__logo" src="./images/logo.svg" alt="Место России" />
         </header>
         <main class="main">
             <section class="profile">
-                <img class="profile__avatar" src="./images/kusto.png" alt="Жак Ив Кусто">
+                <img class="profile__avatar" src="./images/kusto.png" alt="Жак Ив Кусто" />
                 <div class="profile__info">
                     <div class="profile__header">
                         <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -27,9 +27,7 @@
                 <button class="profile__add-button" type="button" title="Добавить фото"></button>
             </section>
             <section class="elements" aria-label="Достопримечательности">
-                <ul class="element__cards">
-
-                </ul>
+                <ul class="elements__cards"></ul>
             </section>
         </main>
     </div>
@@ -41,8 +39,8 @@
             <h2 class="popup__title">Редактировать профиль</h2>
             <button class="popup__close" type="button"></button>
             <form class="popup__form" name="popup" novalidate>
-                <input class="popup__input popup__input_value_name" name="profile__title" placeholder="Ваше имя">
-                <input class="popup__input popup__input_value_about" name="profile__subtitle " placeholder="О себе">
+                <input class="popup__input popup__input_value_name" name="profile__title" placeholder="Ваше имя" />
+                <input class="popup__input popup__input_value_about" name="profile__subtitle " placeholder="О себе" />
                 <button class="popup__submit submit" type="submit">Сохранить</button>
             </form>
         </div>
@@ -50,10 +48,10 @@
     <section class="popup popup_add">
         <div class="popup__container popup__container_add">
             <h2 class="popup__title">Новое место</h2>
-            <button class="popup__close popup_add-close" type="button"></button>
+            <button class="popup__close popup__close_add" type="button"></button>
             <form class="popup__form popup__form_add" name="popup" novalidate>
-                <input class="popup__input popup__input_value_place" name="name" placeholder="Название">
-                <input class="popup__input popup__input_value_link" name="link" placeholder="Ссылка на картинку">
+                <input class="popup__input popup__input_value_place" name="name" placeholder="Название" />
+                <input class="popup__input popup__input_value_link" name="link" placeholder="Ссылка на картинку" />
                 <button class="popup__save submit" type="submit">Создать</button>
             </form>
         </div>
@@ -61,20 +59,20 @@
     <div class="popup image-popup">
         <div class="image-popup__container">
             <button class="popup__close image-popup__close" type="button"></button>
-            <img src="#" alt="Изображение" class="image-popup__image">
+            <img src="#" alt="Изображение" class="image-popup__image" />
             <h2 class="image-popup__title"></h2>
         </div>
     </div>
     <template class="template">
-        <li class="article">
-            <img class="article__item" src="#" alt="Изображение">
-            <button class="article__delete" type="button"></button>
-            <div class="article__content">
-            <h2 class="article__title"></h2>
-            <button class="article__icon" type="button" aria-label="Лайк"></button>
-            </div>
-        </li>
-    </template>
+            <li class="article">
+                <img class="article__item" src="#" alt="Изображение" />
+                <button class="article__delete" type="button"></button>
+                <div class="article__content">
+                    <h2 class="article__title"></h2>
+                    <button class="article__icon" type="button" aria-label="Лайк"></button>
+                </div>
+            </li>
+        </template>
     <script src="scripts/index.js"></script>
 </body>
 
