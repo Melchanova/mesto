@@ -1,6 +1,8 @@
-.article__content {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+        .article__content {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            height: 79px;
+        }

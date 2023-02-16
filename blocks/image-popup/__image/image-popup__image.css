@@ -1,5 +1,7 @@
 .image-popup__image {
     object-fit: cover;
+    max-width: 75vw;
+    max-height: 75vh;
     padding: 0;
     margin: 0;
     background-color: rgba(0, 0, 0, .9);
