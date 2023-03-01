@@ -24,6 +24,9 @@ const imagePopup = document.querySelector(".image-popup");
 const popupImage = document.querySelector(".image-popup__image");
 const popupImageTitle = document.querySelector(".image-popup__title");
 
+
+
+
 const initialCards = [{
         name: "Архыз",
         link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
@@ -77,17 +80,37 @@ initialCards.forEach((card) => {
     elementsCards.append(newAddCard);
 });
 
+
 closeButtons.forEach((button) => {
     const popup = button.closest(".popup");
     button.addEventListener('click', () => closePopup(popup));
 });
 
+const closeWithEsc = (evt) => {
+    if (evt.key === 'Escape') {
+        const popupOpened = document.querySelector('.popup_opened');
+        closePopup(popupOpened);
+    }
+}
+
+const closeOverlayListener = function(evt) {
+    const popupOpened = document.querySelector('.popup_opened');
+    if (evt.target === popupOpened) {
+        closePopup(popupOpened);
+    }
+}
+
+
 function openPopup(popup) {
     popup.classList.add('popup_opened');
+    document.addEventListener('keyup', closeWithEsc);
+    document.addEventListener('mousedown', closeOverlayListener);
 }
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
+    document.removeEventListener('keyup', closeWithEsc);
+    document.addEventListener('mousedown', closeOverlayListener);
 }
 
 //1 попап
@@ -119,5 +142,4 @@ function handleProfileFormSubmitClick(evt) {
 profilePopupForm.addEventListener("submit", handleProfileFormSubmitClick);
 editButton.addEventListener("click", handleEditButtonClick);
 openAddButton.addEventListener("click", handleOpenAddButtonClick);
-
 popupFormAdd.addEventListener("submit", handleAddSubmitClick);
