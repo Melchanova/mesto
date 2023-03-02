@@ -47,21 +47,12 @@ function toggleButton(form, config) {
     buttonSubmit.classList.toggle("popup__button_disabled", !isFormValid);
 
 }
-const toggleButtonClose = (inputList, buttonSubmit, config) => {
-    if (handleFormImput(inputList)) {
-        buttonSubmit.classList.add(config.inactiveButtonClass);
-        buttonSubmit.setAttribute("disabled", true);
-    } else {
-        buttonSubmit.classList.remove(config.inactiveButtonClass);
-        buttonSubmit.removeAttribute("disabled");
-    }
-}
 
 function addInputListners(form, config) {
     const inputList = Array.from(form.querySelectorAll(config.inputSelector));
 
     inputList.forEach((inputElement) => {
-        inputElement.addEventListener('input', (evt) => {
+        inputElement.addEventListener("input", (evt) => {
             handleFormImput(evt, config)
         });
     });

@@ -23,9 +23,9 @@ const elementsCards = document.querySelector(".elements__cards");
 const imagePopup = document.querySelector(".image-popup");
 const popupImage = document.querySelector(".image-popup__image");
 const popupImageTitle = document.querySelector(".image-popup__title");
+const buttonAddSubmit = document.querySelector(".popup__add-button");
 
-
-
+const popups = document.querySelectorAll('.popup')
 
 const initialCards = [{
         name: "Архыз",
@@ -80,37 +80,32 @@ initialCards.forEach((card) => {
     elementsCards.append(newAddCard);
 });
 
-
-closeButtons.forEach((button) => {
-    const popup = button.closest(".popup");
-    button.addEventListener('click', () => closePopup(popup));
-});
+popups.forEach((popup) => {
+    popup.addEventListener('mousedown', (evt) => {
+        if (evt.target.classList.contains('popup_opened')) {
+            closePopup(popup)
+        }
+        if (evt.target.classList.contains('popup__close')) {
+            closePopup(popup)
+        }
+    })
+})
 
 const closeWithEsc = (evt) => {
-    if (evt.key === 'Escape') {
-        const popupOpened = document.querySelector('.popup_opened');
+    if (evt.key === "Escape") {
+        const popupOpened = document.querySelector(".popup_opened");
         closePopup(popupOpened);
     }
 }
-
-const closeOverlayListener = function(evt) {
-    const popupOpened = document.querySelector('.popup_opened');
-    if (evt.target === popupOpened) {
-        closePopup(popupOpened);
-    }
-}
-
 
 function openPopup(popup) {
-    popup.classList.add('popup_opened');
-    document.addEventListener('keyup', closeWithEsc);
-    document.addEventListener('mousedown', closeOverlayListener);
+    popup.classList.add("popup_opened");
+    document.addEventListener("keyup", closeWithEsc);
 }
 
 function closePopup(popup) {
-    popup.classList.remove('popup_opened');
-    document.removeEventListener('keyup', closeWithEsc);
-    document.addEventListener('mousedown', closeOverlayListener);
+    popup.classList.remove("popup_opened");
+    document.removeEventListener("keyup", closeWithEsc);
 }
 
 //1 попап
@@ -122,7 +117,9 @@ function handleEditButtonClick(evt) {
 //2попап
 function handleOpenAddButtonClick(evt) {
     openPopup(popupAdd);
+
 }
+
 //Добавление новой карточки
 function handleAddSubmitClick(evt) {
     evt.preventDefault();
@@ -130,6 +127,7 @@ function handleAddSubmitClick(evt) {
     elementsCards.prepend(itemCardNew);
     evt.target.reset();
     closePopup(popupAdd);
+    buttonAddSubmit.classList.add("popup__button_disabled");
 }
 // Обработчик «отправки» формы, хотя пока
 function handleProfileFormSubmitClick(evt) {
@@ -143,3 +141,6 @@ profilePopupForm.addEventListener("submit", handleProfileFormSubmitClick);
 editButton.addEventListener("click", handleEditButtonClick);
 openAddButton.addEventListener("click", handleOpenAddButtonClick);
 popupFormAdd.addEventListener("submit", handleAddSubmitClick);
+openAddButton.addEventListener("click", () => {
+    buttonAddSubmit.classList.add("popup__button_disabled");
+});

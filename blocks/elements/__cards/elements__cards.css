@@ -1,5 +1,5 @@
             .elements__cards {
-                padding-top: 47px;
+                padding: 47px 0 0 0;
                 max-width: 880px;
                 min-height: 744px;
                 display: grid;
