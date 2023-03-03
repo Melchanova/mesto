@@ -44,13 +44,12 @@ function toggleButton(form, config) {
     const buttonSubmit = form.querySelector(config.submitButtonSelector);
     const isFormValid = form.checkValidity();
     buttonSubmit.disabled = !isFormValid;
-    buttonSubmit.classList.toggle("popup__button_disabled", !isFormValid);
+    buttonSubmit.classList.toggle(config.inactiveButtonClass, !isFormValid);
 
 }
 
 function addInputListners(form, config) {
     const inputList = Array.from(form.querySelectorAll(config.inputSelector));
-
     inputList.forEach((inputElement) => {
         inputElement.addEventListener("input", (evt) => {
             handleFormImput(evt, config)

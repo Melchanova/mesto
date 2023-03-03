@@ -23,7 +23,7 @@ const elementsCards = document.querySelector(".elements__cards");
 const imagePopup = document.querySelector(".image-popup");
 const popupImage = document.querySelector(".image-popup__image");
 const popupImageTitle = document.querySelector(".image-popup__title");
-const buttonAddSubmit = document.querySelector(".popup__add-button");
+const buttonAddSubmit = popupAdd.querySelector(".popup__add-button");
 
 const popups = document.querySelectorAll('.popup')
 
@@ -117,7 +117,7 @@ function handleEditButtonClick(evt) {
 //2попап
 function handleOpenAddButtonClick(evt) {
     openPopup(popupAdd);
-
+    buttonAddSubmit.disabled = true;
 }
 
 //Добавление новой карточки
@@ -125,9 +125,8 @@ function handleAddSubmitClick(evt) {
     evt.preventDefault();
     const itemCardNew = createCards(nameInput.value, linkInput.value);
     elementsCards.prepend(itemCardNew);
-    evt.target.reset();
     closePopup(popupAdd);
-    buttonAddSubmit.classList.add("popup__button_disabled");
+    popupFormAdd.reset();
 }
 // Обработчик «отправки» формы, хотя пока
 function handleProfileFormSubmitClick(evt) {
@@ -141,6 +140,3 @@ profilePopupForm.addEventListener("submit", handleProfileFormSubmitClick);
 editButton.addEventListener("click", handleEditButtonClick);
 openAddButton.addEventListener("click", handleOpenAddButtonClick);
 popupFormAdd.addEventListener("submit", handleAddSubmitClick);
-openAddButton.addEventListener("click", () => {
-    buttonAddSubmit.classList.add("popup__button_disabled");
-});
