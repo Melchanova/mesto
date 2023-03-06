@@ -117,6 +117,7 @@ function handleEditButtonClick(evt) {
 //2попап
 function handleOpenAddButtonClick(evt) {
     openPopup(popupAdd);
+    buttonAddSubmit.classList.add("popup__button_disabled");
     buttonAddSubmit.disabled = true;
 }
 
