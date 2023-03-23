@@ -1,8 +1,9 @@
     .error {
         font-weight: 400;
         font-size: 12px;
-        line-height: 15px;
+        line-height: 1;
         padding-top: 5px;
         margin: 0;
         color: #FF0000;
+        min-height: 25px;
     }

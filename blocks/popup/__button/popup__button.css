@@ -17,10 +17,6 @@
     .popup__button:hover {
         opacity: .8;
     }
-    /*.popup__button:disabled {
-        cursor: not-allowed;
-        background-color: #E5E5E5;
-    }*/
     
     @media screen and (max-width: 767px) {
         .popup__button {
