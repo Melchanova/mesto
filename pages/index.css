@@ -37,4 +37,4 @@
 @import url(../blocks/image-popup/__title/image-popup__title.css);
 @import url(../blocks/error/error.css);
 @import url(../blocks/popup/__input/_type_error/popup__imput_type_error.css);
-@import url(../);
+@import url(../blocks/error/_active/error_active.css);
