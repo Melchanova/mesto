@@ -1,9 +1,5 @@
 export {FormValidator};
-// Мне жуть как тяжело дается обучение(
-//к 8 спринту переделаю карточки. Спасибо, за то, что 
-// подсказываете, помогаете, 
-//но если у меня что то работает и требуются какие то изменения,
-//для меня это целая трагедия. Скоро волос не останется))
+
 class FormValidator {
     constructor(validationConfig, form) {
         this._inputSelector = validationConfig.inputSelector,

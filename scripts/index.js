@@ -104,11 +104,11 @@ function handleEditButtonClick(evt) {
     validationEdit.reset();
    
 }
-function handleOpenAddButtonClick(evt) {
-    openPopup(popupAdd);
-    validationAdd.reset();
+// function handleOpenAddButtonClick(evt) {
+//     openPopup(popupAdd);
+//     validationAdd.reset();
     
-}
+// }
 
 
 // Обработчик <<отправки» формы редактирования профиля>>
@@ -121,9 +121,10 @@ function handleProfileFormSubmitClick(evt) {
 }
 
 profilePopupForm.addEventListener("submit", handleProfileFormSubmitClick);
-editButton.addEventListener("click", handleEditButtonClick);
-openAddButton.addEventListener("click", handleOpenAddButtonClick);
 popupFormAdd.addEventListener("submit", handleAddSubmitClick);
-
+editButton.addEventListener("click", handleEditButtonClick);
+openAddButton.addEventListener('click', () => { openPopup(popupAdd);
+    validationAdd.toggleButtonState();
+ });
 
 export { openPopup };
