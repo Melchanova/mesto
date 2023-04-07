@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mesto</title>
+        <!--<link rel="stylesheet" href="./pages/index.css">-->
+    </head>
+
+    <body class="root">
+        <div class="page">
+            <header class="header">
+                <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="Место России">
+            </header>
+            <main class="main">
+                <section class="profile">
+                    <img class="profile__avatar" src="<%=require('./images/kusto.png')%>" alt="Жак Ив Кусто">
+                    <div class="profile__info">
+                        <div class="profile__header">
+                            <h1 class="profile__title">Жак-Ив Кусто</h1>
+                            <p class="profile__subtitle">Исследователь океана</p>
+                        </div>
+                        <button class="profile__edit-button" type="button" title="Редактировать профиль"></button>
+                    </div>
+                    <button class="profile__add-button" type="button" title="Добавить фото"></button>
+                </section>
+                <section class="elements" aria-label="Достопримечательности">
+                    <ul class="elements__cards"></ul>
+                </section>
+            </main>
+        </div>
+        <footer class="footer">
+            <p class="footer__copyright">&copy;2023 Mesto Russia</p>
+        </footer>
+        <section class="popup popup_edit">
+            <div class="popup__container popup__container_edit">
+                <h2 class="popup__title popup__title_edit">Редактировать профиль</h2>
+                <button class="popup__close popup__close_edit" type="button"></button>
+
+                <form class="popup__form popup__form_edit" name="popup" novalidate>
+                    <input id="name" required class="popup__input popup__input_value_name" type="text" name="name" placeholder="Ваше имя" minlength="2" maxlength="40">
+
+                    <span class="error name-error"></span>
+
+                    <input id="about" required class="popup__input popup__input_value_about" type="text" name="about" placeholder="О себе" minlength="2" maxlength="200">
+
+                    <span class="error about-error"></span>
+
+                    <button class="popup__button" type="save">Сохранить</button>
+                </form>
+            </div>
+        </section>
+        <section class="popup popup_add">
+            <div class="popup__container popup__container_add">
+                <h2 class="popup__title popup__title_add">Новое место</h2>
+                <button class="popup__close popup__close_add" type="button"></button>
+                <form class="popup__form popup__form_add" id="form" name="popup" novalidate>
+                    <input id="place" required class="popup__input popup__input_value_place" type="text" name="name" placeholder="Название" minlength="2" maxlength="30">
+
+                    <span class="error place-error"></span>
+
+                    <input id="link" required class="popup__input popup__input_value_link" type="url" name="link" placeholder="Ссылка на картинку">
+
+                    <span class="error link-error"></span>
+
+                    <button class="popup__button popup__add-button" type="submit">Создать</button>
+                </form>
+            </div>
+        </section>
+        <div class="popup image-popup">
+            <div class="image-popup__container">
+                <button class="popup__close image-popup__close" type="button"></button>
+                <img src="#" alt="Изображение" class="image-popup__image">
+                <h2 class="image-popup__title"></h2>
+            </div>
+        </div>
+        <template class="template">
+            <li class="article">
+                <img class="article__item" src="#" alt="Изображение">
+                <button class="article__delete" type="button"></button>
+                <div class="article__content">
+                    <h2 class="article__title"></h2>
+                    <button class="article__icon" type="button" aria-label="Лайк"></button>
+                </div>
+            </li>
+        </template>
+    </body>
+</html>
+
+    <!--<script type="module" src="./pages/index.js"></script>-->
+
+</body>
+
+</html>
