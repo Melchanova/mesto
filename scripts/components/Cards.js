@@ -1,10 +1,11 @@
-import { openPopup, imagePopup, popupImage, popupImageTitle } from "./index.js";
+//import { openPopup, imagePopup, popupImage, popupImageTitle } from "../../pages/index.js";
 
 class Card {
-    constructor(data, templateSelector) {
-        this._link = data.link;
+    constructor(data, templateSelector, handleNewClick) {
         this._name = data.name;
+        this._link = data.link;
         this._templateSelector = templateSelector;
+        this._handleNewClick = handleNewClick;
     }
 
     _getTemplate() {
@@ -24,22 +25,18 @@ class Card {
 
         return this._element;
     }
-    _handleNewClick = () => {
-        openPopup(imagePopup);
-        popupImage.src = this._link;
-        popupImage.alt = this._name;
-        popupImageTitle.textContent = this._name;
-    };
+    
     _handleCardLike = () => {
         this._buttonIconToggle.classList.toggle("article__like-active");
     };
     _handledeleteCard = () => {
         this._element.remove();
+        this._element = null;
     };
 
     _setEventListeners() {
         this._element.querySelector(".article__item").addEventListener("click", () => {
-            this._handleNewClick();
+            this._handleNewClick(this._name, this._link);
         });
         this._element.querySelector(".article__icon").addEventListener("click", () => {
             this._handleCardLike();
@@ -50,4 +47,4 @@ class Card {
         });
     }
 }
-export { Card };
+export {Card};

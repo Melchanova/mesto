@@ -1,5 +1,3 @@
-export {FormValidator};
-
 class FormValidator {
     constructor(validationConfig, form) {
         this._inputSelector = validationConfig.inputSelector,
@@ -9,12 +7,14 @@ class FormValidator {
         this._errorClass = validationConfig.errorClass,
         this._form = form
     }
-    reset = () => { 
-        this._inputList.forEach((input) => {
-          input.classList.remove(this._inputErrorClass);
-          input.nextElementSibling.textContent = '';
+    resetValidation() {
+        this._toggleButtonState();
+  
+        this._inputList.forEach((inputElement) => {
+          this._hideError(inputElement)
         });
-    }
+  
+      }
         
     _showInputError = (inputElement, errorMessage) => {
         const errorElement = this._form.querySelector(`.${inputElement.id}-error`);
@@ -71,3 +71,4 @@ class FormValidator {
         this._setEventListeners();
     };
 };
+export {FormValidator};
