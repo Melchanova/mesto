@@ -35,7 +35,7 @@ validationEdit.enableValidation();
 const validationAdd = new FormValidator(validationConfig, popupFormAdd);
 validationAdd.enableValidation();
 
-const cardOpenPopup = new PopupWithImage(imagePopup);
+const cardOpenPopup = new PopupWithImage(".image-popup");
 
 const userInfo = new UserInfo({
     nameSelector: ".profile__title",
@@ -50,11 +50,11 @@ function createCard(item) {
     return card.generateCard();
 }
 
-const formEdit = new PopupWithForm(profilePopup, function (element) {
+const formEdit = new PopupWithForm(".popup_edit", function (element) {
     userInfo.setUserInfo(element);
 });
 
-const formAdd = new PopupWithForm(popupAdd, function ({ name, link }) {
+const formAdd = new PopupWithForm(".popup_add", function ({ name, link }) {
     cardSection.addItem(
         createCard({
             name: name,
