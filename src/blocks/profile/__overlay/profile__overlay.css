@@ -1,6 +1,6 @@
 .profile__overlay {
     position: relative;
-    margin: auto;
+    /*margin: auto;*/
     border-radius: 50%;
     margin: 0;
   }
